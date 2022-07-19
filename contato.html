@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contato - Barbearia Alura</title>
+
+		<link rel="stylesheet" href="reset.css"> <!--limpa/reseta td a config do navegador ANTES de aplicar nossa config/style-->
+		<link rel="stylesheet" href="style.css"> <!-- rel(relação) stylesheet(folha de estilo) href(endereço)-->
+	</head>
+
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li> <!-- tag <a> usada p/ criar link (anchor/ancora)-->
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div> <!--usado para fazer o cabeçalho do site-->
+		</header>
+		
+		<main>
+			<form>
+				<label for="nomesobrenome">Nome e Sobrenome</label> <!--cria etiquetas para o usuario inserir informaçoes-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required>  <!--inserir algo/qualquer tipo de informação-->
+
+				<label for="email">Email</label>
+				<input type="text" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!--Colocamos um id para o input e associamos esse id ao atributo for do label, placeholder(texto de exemplo)-->
+
+				<label for="telefone">Telefone</label>
+				<input type="text" id="telefone" class="input-padrao" required placeholder="(xx)xxxxx-xxxx">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea> <!--cols(colunas) rows(linhas) textarea para mais linhas-->
+
+				<fieldset>				
+					<legend>Como prefere o nosso contato?</legend> <!--legend= título de um grupo de campos em qualquer formulário.-->
+					<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+					
+					<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+					
+					<label for="radio-whatsapp"> <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select> <!--seletor, um campo de seleção de um item-->
+						<option>Manhã</option> <!--que representa cada opção do seletor-->
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</fieldset>
+
+				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+				<input type="submit" value="Enviar formulário" class="enviar"> <!--input para enviar os dados-->
+			</form>
+
+			<table> <!-- uma tabela-->
+				<thead>
+					<tr> 
+						<th>Dia</th> 
+						<th>Horário</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Segunda</td>
+						<td>8h~20h</td>
+					</tr>
+					<tr>
+						<td>Quarta</td>
+						<td>8h~20h</td>
+					</tr>
+					<tr>
+						<td>Sexta</td>
+						<td>8h~20h</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--A tag table, que representa a tabela
+				A tag tr, que representa a linha da tabela
+				A tag td, que representa a célula da tabela
+				A tag thead, que representa o cabeçalho da tabela
+				A tag tbody, que representa o corpo da tabela
+				A tag th, que representa a célula do cabeçalho da tabela
+				A tag tfoot, que representa o rodapé da tabela-->
+		</main>
+
+
+		<footer> <!--usado para fazer o rodapé do site-->
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2022</p> <!--usando Unicode para incluir caracteres especiais-->
+		</footer>
+	</body>
+</html>
